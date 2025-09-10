@@ -4,7 +4,7 @@ signal health_depleted
 
 var health = 100.0
 
-
+var coin_counter = 0 
 func _physics_process(delta):
 	const SPEED = 600.0
 	var direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
@@ -25,3 +25,10 @@ func _physics_process(delta):
 		%HealthBar.value = health
 		if health <= 0.0:
 			health_depleted.emit()
+func _on_area_2d_area_entered(area: Area2D) -> void:
+	if area.is_in_group("Coins"):
+		set_coin(coin_counter + 1)
+		print(coin_counter)
+
+func set_coin(new_coin_count: int) -> void:
+	coin_counter = new_coin_count
