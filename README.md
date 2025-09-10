@@ -3,6 +3,7 @@ I  tried some more complicated features like mobs glowing red and chain explosio
 Mobs now spawn faster over time.
 I added collectible coins to the map.
 There's a new score counter for the coins.
+I also added a 'health restoration' feature to the coins
 I gave the bullets a lighting effect. (Just for fun)
 
 I also had some issues with Git which I will implement better as I only just realised I wasn't committing right
